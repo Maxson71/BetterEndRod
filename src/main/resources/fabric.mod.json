@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "betterendrod",
+  "version": "${version}",
+  "name": "BetterEndRod",
+  "description": "This mod adds new types of end rod",
+  "authors": [
+    "Maxson__"
+  ],
+  "contact": {
+    "repo": "https://github.com/Maxson71/BetterEndRod"
+  },
+  "license": "All-Rights-Reserved",
+  "icon": "assets/betterendrod/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "com.maxson.betterendrod.client.BetterEndRodClient"
+    ],
+    "main": [
+      "com.maxson.betterendrod.BetterEndRod"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
