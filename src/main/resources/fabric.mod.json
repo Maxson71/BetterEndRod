@@ -8,22 +8,29 @@
     "Maxson__"
   ],
   "contact": {
-    "repo": "https://github.com/Maxson71/BetterEndRod"
+    "sources": "https://github.com/Maxson71/BetterEndRod"
   },
-  "license": "All-Rights-Reserved",
+  "license": "CC0-1.0",
   "icon": "assets/betterendrod/icon.png",
   "environment": "*",
   "entrypoints": {
-    "client": [
-      "com.maxson.betterendrod.client.BetterEndRodClient"
-    ],
     "main": [
       "com.maxson.betterendrod.BetterEndRod"
+    ],
+    "client": [
+      "com.maxson.betterendrod.BetterEndRodClient"
     ]
   },
+  "mixins": [
+    "betterendrod.client.json"
+  ],
   "depends": {
-    "fabricloader": ">=${loader_version}",
-    "fabric": "*",
-    "minecraft": "${minecraft_version}"
+    "fabricloader": ">=0.14.21",
+    "minecraft": "~1.20.1",
+    "java": ">=17",
+    "fabric-api": "*"
+  },
+  "suggests": {
+    "another-mod": "*"
   }
 }
