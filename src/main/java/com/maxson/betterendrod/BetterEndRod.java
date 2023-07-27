@@ -1,9 +1,11 @@
 package com.maxson.betterendrod;
 
-import com.maxson.betterendrod.blockendrod.BlockEndRod;
-import com.maxson.betterendrod.itemendrod.ItemEndRod;
+import com.maxson.betterendrod.block.BlockEndRod;
+import com.maxson.betterendrod.item.GroupItems;
+import com.maxson.betterendrod.item.test_item;
 import net.fabricmc.api.ModInitializer;
 
+import net.minecraft.server.command.GameRuleCommand;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -13,7 +15,8 @@ public class BetterEndRod implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        ItemEndRod.register();
+        GroupItems.register();
+        test_item.register();
         BlockEndRod.register();
     }
 }
