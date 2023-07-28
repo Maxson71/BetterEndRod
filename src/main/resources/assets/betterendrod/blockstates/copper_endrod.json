@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "facing=up": { "model": "betterendrod:block/copper_endrod" },
+    "facing=down": { "model": "betterendrod:block/copper_endrod", "x": 180 },
+    "facing=east": { "model": "betterendrod:block/copper_endrod", "y": 90, "x": 90 },
+    "facing=south": { "model": "betterendrod:block/copper_endrod", "y": 180, "x": 90 },
+    "facing=west": { "model": "betterendrod:block/copper_endrod", "y": 270, "x": 90 },
+    "facing=north": { "model": "betterendrod:block/copper_endrod", "y": 0, "x": 90 }
+  }
+}

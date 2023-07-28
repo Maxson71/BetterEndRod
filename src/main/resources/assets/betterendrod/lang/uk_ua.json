@@ -1,4 +1,7 @@
 {
   "item.betterendrod.test_item": "Тест",
-  "block.betterendrod.redstone_endrod": "Червоний Стержень Краю"
+  "block.betterendrod.redstone_endrod": "Редстоуновий Стержень Краю",
+  "block.betterendrod.sand_endrod": "Піщаний Стержень Краю",
+  "block.betterendrod.honey_endrod": "Медовий Стержень Краю",
+  "block.betterendrod.copper_endrod": "Мідний Стержень Краю"
 }
