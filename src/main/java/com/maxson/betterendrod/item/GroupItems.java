@@ -11,6 +11,9 @@ public class GroupItems {
             entries.add(Blocks.SAND_ENDROD);
             entries.add(Blocks.HONEY_ENDROD);
             entries.add(Blocks.COPER_ENDROD);
+            entries.add(Blocks.EMERALD_ENDROD);
+            entries.add(Blocks.RUSTY_ENDROD);
+            entries.add(Blocks.AMETHYST_ENDROD);
         });
     }
 }

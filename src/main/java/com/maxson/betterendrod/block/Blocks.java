@@ -13,13 +13,19 @@ import net.minecraft.util.Identifier;
 public class Blocks {
 
     public static final Block REDSTONE_ENDROD = registerBlock("redstone_endrod",
-            new RedstoneEndRodBlock(FabricBlockSettings.copyOf(net.minecraft.block.Blocks.END_ROD)));
+            new EndRodBlock(FabricBlockSettings.copyOf(net.minecraft.block.Blocks.END_ROD)));
     public static final Block SAND_ENDROD = registerBlock("sand_endrod",
-            new RedstoneEndRodBlock(FabricBlockSettings.copyOf(net.minecraft.block.Blocks.END_ROD)));
+            new EndRodBlock(FabricBlockSettings.copyOf(net.minecraft.block.Blocks.END_ROD)));
     public static final Block HONEY_ENDROD = registerBlock("honey_endrod",
-            new RedstoneEndRodBlock(FabricBlockSettings.copyOf(net.minecraft.block.Blocks.END_ROD)));
+            new EndRodBlock(FabricBlockSettings.copyOf(net.minecraft.block.Blocks.END_ROD)));
     public static final Block COPER_ENDROD = registerBlock("copper_endrod",
-            new RedstoneEndRodBlock(FabricBlockSettings.copyOf(net.minecraft.block.Blocks.END_ROD)));
+            new EndRodBlock(FabricBlockSettings.copyOf(net.minecraft.block.Blocks.END_ROD)));
+    public static final Block AMETHYST_ENDROD = registerBlock("amethyst_endrod",
+            new EndRodBlock(FabricBlockSettings.copyOf(net.minecraft.block.Blocks.END_ROD)));
+    public static final Block RUSTY_ENDROD = registerBlock("rusty_endrod",
+            new EndRodBlock(FabricBlockSettings.copyOf(net.minecraft.block.Blocks.END_ROD)));
+    public static final Block EMERALD_ENDROD = registerBlock("emerald_endrod",
+            new EndRodBlock(FabricBlockSettings.copyOf(net.minecraft.block.Blocks.END_ROD)));
 
     private static Block registerBlock(String id, Block block){
         registerBlockItem(id, block);

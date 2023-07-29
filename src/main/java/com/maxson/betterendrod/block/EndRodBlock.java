@@ -1,6 +1,5 @@
 package com.maxson.betterendrod.block;
 
-import com.maxson.betterendrod.particle.Particles;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -14,9 +13,9 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 
-public class RedstoneEndRodBlock extends RodBlock {
+public class EndRodBlock extends RodBlock {
 
-    public RedstoneEndRodBlock(AbstractBlock.Settings settings) {
+    public EndRodBlock(AbstractBlock.Settings settings) {
         super(settings);
         this.setDefaultState((BlockState)((BlockState)this.stateManager.getDefaultState()).with(FACING, Direction.UP));
     }
@@ -34,7 +33,7 @@ public class RedstoneEndRodBlock extends RodBlock {
         double f = (double)pos.getZ() + 0.55 - (double)(random.nextFloat() * 0.1F);
         double g = (double)(0.4F - (random.nextFloat() + random.nextFloat()) * 0.4F);
         if (random.nextInt(5) == 0) {
-            world.addParticle(ParticleTypes.FLAME, d + (double)direction.getOffsetX() * g, e + (double)direction.getOffsetY() * g, f + (double)direction.getOffsetZ() * g, random.nextGaussian() * 0.005, random.nextGaussian() * 0.005, random.nextGaussian() * 0.005);
+            world.addParticle(ParticleTypes.END_ROD, d + (double)direction.getOffsetX() * g, e + (double)direction.getOffsetY() * g, f + (double)direction.getOffsetZ() * g, random.nextGaussian() * 0.005, random.nextGaussian() * 0.005, random.nextGaussian() * 0.005);
         }
 
     }

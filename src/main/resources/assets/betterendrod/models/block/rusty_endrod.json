@@ -1,0 +1,45 @@
+{   "parent": "block/block",
+  "display": {
+    "head": {
+      "rotation": [ -60, 0, 0 ],
+      "translation": [ 0, 5, -9],
+      "scale":[ 1, 1, 1]
+    },
+    "thirdperson_righthand": {
+      "rotation": [ 0, 0, 0 ],
+      "translation": [ 0, 0, 0],
+      "scale": [ 0.375, 0.375, 0.375 ]
+    }
+  },
+  "ambientocclusion": false,
+  "textures": {
+    "rusty_endrod": "betterendrod:block/rusty_endrod",
+    "particle": "betterendrod:block/rusty_endrod"
+  },
+  "elements": [
+    {
+      "from": [ 6, 0, 6 ],
+      "to": [ 10, 1, 10 ],
+      "faces": {
+        "down":  { "uv": [ 6, 6, 2, 2 ], "texture": "#rusty_endrod" },
+        "up":    { "uv": [ 2, 2, 6, 6 ], "texture": "#rusty_endrod" },
+        "north": { "uv": [ 2, 6, 6, 7 ], "texture": "#rusty_endrod" },
+        "south": { "uv": [ 2, 6, 6, 7 ], "texture": "#rusty_endrod" },
+        "west":  { "uv": [ 2, 6, 6, 7 ], "texture": "#rusty_endrod" },
+        "east":  { "uv": [ 2, 6, 6, 7 ], "texture": "#rusty_endrod" }
+      }
+    },
+    {
+      "from": [ 7, 1, 7 ],
+      "to": [ 9, 16, 9 ],
+      "faces": {
+        "down":  { "uv": [ 4, 2, 2, 0 ], "texture": "#rusty_endrod" },
+        "up":    { "uv": [ 2, 0, 4, 2 ], "texture": "#rusty_endrod" },
+        "north": { "uv": [ 0, 0, 2, 15 ], "texture": "#rusty_endrod" },
+        "south": { "uv": [ 0, 0, 2, 15 ], "texture": "#rusty_endrod" },
+        "west":  { "uv": [ 0, 0, 2, 15 ], "texture": "#rusty_endrod" },
+        "east":  { "uv": [ 0, 0, 2, 15 ], "texture": "#rusty_endrod" }
+      }
+    }
+  ]
+}

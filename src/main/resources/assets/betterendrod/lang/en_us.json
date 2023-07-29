@@ -3,5 +3,8 @@
   "block.betterendrod.redstone_endrod": "Redstone End Rod",
   "block.betterendrod.sand_endrod": "Sand End Rod",
   "block.betterendrod.honey_endrod": "Honey End Rod",
-  "block.betterendrod.copper_endrod": "Copper End Rod"
+  "block.betterendrod.copper_endrod": "Copper End Rod",
+  "block.betterendrod.rusty_endrod": "Rusty End Rod",
+  "block.betterendrod.amethyst_endrod": "Amethyst End Rod",
+  "block.betterendrod.emerald_endrod": "Emerald End Rod"
 }
