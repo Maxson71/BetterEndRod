@@ -1,10 +1,13 @@
 package com.maxson.betterendrod.block;
 
+import com.maxson.betterendrod.particle.ParticlesMod;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.RodBlock;
 import net.minecraft.item.ItemPlacementContext;
+import net.minecraft.particle.ParticleEffect;
+import net.minecraft.particle.ParticleType;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.Property;
@@ -14,10 +17,13 @@ import net.minecraft.util.math.random.Random;
 import net.minecraft.world.World;
 
 public class EndRodBlock extends RodBlock {
+    // Додаємо поле для зберігання типу частинки
+    private final ParticleType<?> particleType;
 
-    public EndRodBlock(AbstractBlock.Settings settings) {
+    public EndRodBlock(AbstractBlock.Settings settings, ParticleType<?> particleType) {
         super(settings);
-        this.setDefaultState((BlockState)((BlockState)this.stateManager.getDefaultState()).with(FACING, Direction.UP));
+        this.setDefaultState((BlockState) ((BlockState) this.stateManager.getDefaultState()).with(FACING, Direction.UP));
+        this.particleType = particleType;
     }
 
     public BlockState getPlacementState(ItemPlacementContext ctx) {
@@ -33,7 +39,7 @@ public class EndRodBlock extends RodBlock {
         double f = (double)pos.getZ() + 0.55 - (double)(random.nextFloat() * 0.1F);
         double g = (double)(0.4F - (random.nextFloat() + random.nextFloat()) * 0.4F);
         if (random.nextInt(5) == 0) {
-            world.addParticle(ParticleTypes.END_ROD, d + (double)direction.getOffsetX() * g, e + (double)direction.getOffsetY() * g, f + (double)direction.getOffsetZ() * g, random.nextGaussian() * 0.005, random.nextGaussian() * 0.005, random.nextGaussian() * 0.005);
+            world.addParticle((ParticleEffect) this.particleType, d + (double)direction.getOffsetX() * g, e + (double)direction.getOffsetY() * g, f + (double)direction.getOffsetZ() * g, random.nextGaussian() * 0.005, random.nextGaussian() * 0.005, random.nextGaussian() * 0.005);
         }
 
     }

@@ -7,7 +7,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
-public class Items {
+public class ItemsMod {
 
     public static final Item TEST_ITEM = registerItem("test_item", new Item(new FabricItemSettings()));
 
