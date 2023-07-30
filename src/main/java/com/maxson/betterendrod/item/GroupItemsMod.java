@@ -14,6 +14,7 @@ public class GroupItemsMod {
             entries.add(BlocksMod.EMERALD_ENDROD);
             entries.add(BlocksMod.RUSTY_ENDROD);
             entries.add(BlocksMod.AMETHYST_ENDROD);
+            entries.add(BlocksMod.SCULK_ENDROD);
         });
     }
 }

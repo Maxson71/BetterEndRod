@@ -27,6 +27,8 @@ public class BlocksMod {
             new EndRodBlock(FabricBlockSettings.copyOf(net.minecraft.block.Blocks.END_ROD), ParticlesMod.RUSTY_ENDROD));
     public static final Block EMERALD_ENDROD = registerBlock("emerald_endrod",
             new EndRodBlock(FabricBlockSettings.copyOf(net.minecraft.block.Blocks.END_ROD), ParticlesMod.EMERALD_ENDROD));
+    public static final Block SCULK_ENDROD = registerBlock("sculk_endrod",
+            new EndRodBlock(FabricBlockSettings.copyOf(net.minecraft.block.Blocks.END_ROD), ParticlesMod.SCULK_ENDROD));
 
     private static Block registerBlock(String id, Block block){
         registerBlockItem(id, block);

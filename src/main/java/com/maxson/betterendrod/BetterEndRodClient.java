@@ -28,5 +28,6 @@ public class BetterEndRodClient implements ClientModInitializer {
         ParticleFactoryRegistry.getInstance().register(ParticlesMod.COPPER_ENDROD, EndRodParticle.Factory::new);
         ParticleFactoryRegistry.getInstance().register(ParticlesMod.EMERALD_ENDROD, EndRodParticle.Factory::new);
         ParticleFactoryRegistry.getInstance().register(ParticlesMod.RUSTY_ENDROD, EndRodParticle.Factory::new);
+        ParticleFactoryRegistry.getInstance().register(ParticlesMod.SCULK_ENDROD, EndRodParticle.Factory::new);
     }
 }

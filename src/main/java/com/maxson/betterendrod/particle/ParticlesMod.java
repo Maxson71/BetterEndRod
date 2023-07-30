@@ -17,6 +17,8 @@ public class ParticlesMod {
     public static final DefaultParticleType EMERALD_ENDROD = registerParticle("emerald_endrod");
     public static final DefaultParticleType SAND_ENDROD = registerParticle("sand_endrod");
 
+    public static final DefaultParticleType SCULK_ENDROD = registerParticle("sculk_endrod");
+
     private static DefaultParticleType registerParticle(String id) {
         return Registry.register(Registries.PARTICLE_TYPE, new Identifier(BetterEndRod.MOD_ID, id), FabricParticleTypes.simple());
     }
