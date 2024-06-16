@@ -1,10 +1,9 @@
 {
-  "item.betterendrod.test_item": "Тест",
   "block.betterendrod.redstone_endrod": "Редстоуновий Стержень Краю",
   "block.betterendrod.sand_endrod": "Піщаний Стержень Краю",
   "block.betterendrod.honey_endrod": "Медовий Стержень Краю",
   "block.betterendrod.copper_endrod": "Окислений Стержень Краю",
-  "block.betterendrod.rusty_endrod": "Ржавий Стержень Краю",
+  "block.betterendrod.rusty_endrod": "Іржавий Стержень Краю",
   "block.betterendrod.amethyst_endrod": "Аметистовий Стержень Краю",
   "block.betterendrod.emerald_endrod": "Смарагдовий Стержень Краю",
   "block.betterendrod.sculk_endrod": "Скалк Стержень Краю"

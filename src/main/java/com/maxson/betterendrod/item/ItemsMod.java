@@ -9,9 +9,6 @@ import net.minecraft.util.Identifier;
 
 public class ItemsMod {
 
-    public static final Item TEST_ITEM = registerItem("test_item", new Item(new FabricItemSettings()));
-
-
     public static Item registerItem(String id, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(BetterEndRod.MOD_ID, id), item);
     }
