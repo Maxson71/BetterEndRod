@@ -1,4 +1,6 @@
-{   "parent": "block/block",
+{
+  "render_type": "minecraft:cutout",
+  "parent": "block/block",
   "display": {
     "head": {
       "rotation": [ -60, 0, 0 ],

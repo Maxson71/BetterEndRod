@@ -1,10 +1,14 @@
 plugins {
-    id 'fabric-loom' version '1.6-SNAPSHOT'
+    id 'fabric-loom' version '1.14-SNAPSHOT'
     id 'maven-publish'
 }
 
 version = project.mod_version
 group = project.maven_group
+
+base {
+    archivesName = project.archives_base_name
+}
 
 repositories {
     // Add repositories to retrieve artifacts from in here.
@@ -27,12 +31,14 @@ dependencies {
 processResources {
     inputs.property "version", project.version
     inputs.property "minecraft_version", project.minecraft_version
+    inputs.property "minecraft_dependency", project.minecraft_dependency
     inputs.property "loader_version", project.loader_version
     filteringCharset "UTF-8"
 
     filesMatching("fabric.mod.json") {
         expand "version": project.version,
                 "minecraft_version": project.minecraft_version,
+                "minecraft_dependency": project.minecraft_dependency,
                 "loader_version": project.loader_version
     }
 }
@@ -54,7 +60,6 @@ java {
     if (JavaVersion.current() < javaVersion) {
         toolchain.languageVersion = JavaLanguageVersion.of(targetJavaVersion)
     }
-    archivesBaseName = project.archives_base_name
     // Loom will automatically attach sourcesJar to a RemapSourcesJar task and to the "build" task
     // if it is present.
     // If you remove this line, sources will not be generated.
@@ -63,7 +68,7 @@ java {
 
 jar {
     from("LICENSE") {
-        rename { "${it}_${project.archivesBaseName}"}
+        rename { "${it}_${project.archives_base_name}"}
     }
 }
 
