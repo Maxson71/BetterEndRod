@@ -1,4 +1,4 @@
-{
+﻿{
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
@@ -10,11 +10,11 @@
       "item": "minecraft:end_rod"
     },
     "X": {
-      "item": "minecraft:copper_ingot"
+      "item": "minecraft:sculk"
     }
   },
   "result": {
-    "item": "betterendrod:copper_endrod"
+    "id": "betterendrod:sculk_endrod"
   },
   "show_notification": true
 }

@@ -1,5 +1,6 @@
 package com.maxson.betterendrod.block;
 
+import com.mojang.serialization.MapCodec;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
@@ -9,7 +10,6 @@ import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.particle.ParticleEffect;
-import net.minecraft.particle.ParticleType;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.Properties;
 import net.minecraft.util.math.BlockPos;
@@ -19,12 +19,19 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
 
 public class EndRodBlock extends RodBlock implements Waterloggable {
-    private final ParticleType<?> particleType;
+    private final ParticleEffect particleType;
+    private final MapCodec<EndRodBlock> codec;
 
-    public EndRodBlock(AbstractBlock.Settings settings, ParticleType<?> particleType) {
+    public EndRodBlock(AbstractBlock.Settings settings, ParticleEffect particleType) {
         super(settings);
         this.setDefaultState(this.stateManager.getDefaultState().with(FACING, Direction.UP).with(Properties.WATERLOGGED, Boolean.FALSE));
         this.particleType = particleType;
+        this.codec = createCodec(codecSettings -> new EndRodBlock(codecSettings, particleType));
+    }
+
+    @Override
+    protected MapCodec<? extends EndRodBlock> getCodec() {
+        return this.codec;
     }
 
     @Override
@@ -46,7 +53,7 @@ public class EndRodBlock extends RodBlock implements Waterloggable {
         double f = (double)pos.getZ() + 0.55 - (double)(random.nextFloat() * 0.1F);
         double g = (double)(0.4F - (random.nextFloat() + random.nextFloat()) * 0.4F);
         if (random.nextInt(5) == 0) {
-            world.addParticle((ParticleEffect) this.particleType, d + (double)direction.getOffsetX() * g, e + (double)direction.getOffsetY() * g, f + (double)direction.getOffsetZ() * g, random.nextGaussian() * 0.005, random.nextGaussian() * 0.005, random.nextGaussian() * 0.005);
+            world.addParticle(this.particleType, d + (double)direction.getOffsetX() * g, e + (double)direction.getOffsetY() * g, f + (double)direction.getOffsetZ() * g, random.nextGaussian() * 0.005, random.nextGaussian() * 0.005, random.nextGaussian() * 0.005);
         }
     }
 

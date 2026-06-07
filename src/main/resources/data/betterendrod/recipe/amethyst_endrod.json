@@ -1,4 +1,4 @@
-{
+﻿{
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
@@ -10,11 +10,11 @@
       "item": "minecraft:end_rod"
     },
     "X": {
-      "item": "minecraft:sculk"
+      "item": "minecraft:amethyst_shard"
     }
   },
   "result": {
-    "item": "betterendrod:sculk_endrod"
+    "id": "betterendrod:amethyst_endrod"
   },
   "show_notification": true
 }

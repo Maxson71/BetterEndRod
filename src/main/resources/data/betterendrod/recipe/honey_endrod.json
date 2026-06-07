@@ -1,4 +1,4 @@
-{
+﻿{
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
@@ -14,7 +14,7 @@
     }
   },
   "result": {
-    "item": "betterendrod:honey_endrod"
+    "id": "betterendrod:honey_endrod"
   },
   "show_notification": true
 }
