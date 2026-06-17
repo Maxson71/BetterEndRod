@@ -22,7 +22,7 @@
     ]
   },
   "depends": {
-    "fabricloader": ">=0.15.11",
+    "fabricloader": ">=${loader_version}",
     "minecraft": "${minecraft_dependency}",
     "java": ">=21",
     "fabric-api": "*"
